@@ -1,4 +1,5 @@
-from pessoa import Pessoa
+import conta_corrente
+import cliente
 
 
 class Conta():
@@ -6,7 +7,7 @@ class Conta():
     def __init__(self, agencia, numero_da_conta):
         self.agencia = agencia
         self.numero_da_conta = numero_da_conta
-        self.titular = cliente
+        self.titular = "Vazio"
         self.saldo = 1000
 
     def tirar_extrato(self):
@@ -37,6 +38,7 @@ class Conta():
     def depositar(self, valor):
         if valor > 10:
             self.saldo += valor
+            print("Deposito de R$:" + str(valor) + " realizado.")
         else:
             print("valor mínimo para depósito é de R$ 10!")
 
@@ -47,9 +49,3 @@ class Conta():
             "\nSaldo disponivel: " + str(self.saldo)
         print("Detalhes da conta")
         print(detalhes)
-
-
-cliente = Pessoa(
-    "Daniel", "Spartus", 34,
-    "(11)9776-13445", "spartus.dn@gmail.com"
-)
