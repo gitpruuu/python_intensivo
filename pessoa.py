@@ -14,7 +14,7 @@ class Pessoa():
             else:
                 print("Informe um e-mail válido.")
         else:
-            print("E-mail não pode ser vazio.")
+            print("E-mail não pode ser vazio!")
 
     def alterar_telefone(self, novo_telefone):
         if novo_telefone != "":
